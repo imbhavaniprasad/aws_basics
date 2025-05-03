@@ -36,12 +36,10 @@ jobs:
           npm install
 
       # Step 2: Assume the Lambda deployment role and deploy Lambda
-      - name: Assume Lambda deployment role
-        id: assume-lambda-role
-        uses: aws-actions/assume-role-action@v1
+      - name: Reconfigure AWS credentials with Lambda deploy role
+        uses: aws-actions/configure-aws-credentials@v3
         with:
-          role-arn: ${{ secrets.AWS_LAMBDA_DEPLOY_ROLE }}
-          role-session-name: github-actions-deploy-lambda
+          role-to-assume: ${{ secrets.AWS_LAMBDA_DEPLOY_ROLE }}
           aws-region: ${{ secrets.AWS_REGION }}
 
       # Step 3: Deploy the Lambda function using the assumed role
