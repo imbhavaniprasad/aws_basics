@@ -1,0 +1,22 @@
+{
+  "name": "aws_basics",
+  "version": "1.0.0",
+  "description": "This project is designed to explore the fundamentals of AWS (Amazon Web Services). It includes hands-on examples and explanations to help understand the core concepts and services provided by AWS.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imbhavaniprasad/aws_basics.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/imbhavaniprasad/aws_basics/issues"
+  },
+  "homepage": "https://github.com/imbhavaniprasad/aws_basics#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
