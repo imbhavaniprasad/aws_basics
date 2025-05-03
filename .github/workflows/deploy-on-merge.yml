@@ -48,4 +48,4 @@ jobs:
           # Now, deploy Lambda using the assumed role
           aws lambda update-function-code \
             --function-name aws-basics-poc \
-            --zip-file fileb://lambda-function.zip
+            --zip-file fileb://aws-basics-poc.zip
