@@ -36,7 +36,7 @@ jobs:
           npm install
 
       # Step 2: Assume the Lambda deployment role and deploy Lambda
-      - name: Reconfigure AWS credentials with Lambda deploy role
+      - name: Configure AWS credentials to deploy Lambda
         uses: aws-actions/configure-aws-credentials@v3
         with:
           role-to-assume: ${{ secrets.AWS_LAMBDA_DEPLOY_ROLE }}
