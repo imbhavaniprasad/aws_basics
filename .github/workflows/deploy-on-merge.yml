@@ -41,8 +41,12 @@ jobs:
         with:
           role-to-assume: ${{ secrets.AWS_LAMBDA_DEPLOY_ROLE }}
           aws-region: ${{ secrets.AWS_REGION }}
-
+          
+      - name: Zip Lambda function
+        run: |
+          zip -r aws-basics-poc.zip . -x ".git/*" ".github/*" "aws-basics-poc.zip"
       # Step 3: Deploy the Lambda function using the assumed role
+
       - name: Deploy Lambda function
         run: |
           # Now, deploy Lambda using the assumed role
